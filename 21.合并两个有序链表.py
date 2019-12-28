@@ -12,34 +12,39 @@ class ListNode:
         self.next = None
 
 class Solution:
-    def mergeTwoLists(self, l1:ListNode, l2:ListNode):
-        if len(l1) == 0:
+    def mergeTwoLists(self, l1:ListNode, l2:ListNode)->ListNode:
+        if l1 == None:
             return l2
-        if len(l2) == 0:
+        if l2 == None:
             return l1
-        index_1 = 0
-        index_2 = 0
-        result_list = list()
+        Head = ListNode(0)
+        result_list = ListNode(0)
+        Head.next = result_list
         while (True):
-            if l1[index_1] < l2[index_2]:
-                result_list.append(l1[index_1])
-                index_1 = index_1 + 1
-            elif l1[index_1] > l2[index_2]:
-                result_list.append(l2[index_2])
-                index_2 = index_2 + 1
+            if l1.val< l2.val:
+                result_list.val = l1.val
+                if (l1.next != None):
+                    l1 = l1.next
+            elif l1.val > l2.val:
+                result_list.val = l1.val
+                if (l2.next != None):
+                    l2 = l2.next
             else:
-                result_list.append(l2[index_2])
-                index_2 = index_2 + 1
-                index_1 = index_1 + 1
-            if (index_1 >= len(l1)) and (index_2 < len(l2)):
-                index_1 = len(l1) - 1
-            elif (index_1 < len(l1)) and (index_2 >= len(l2)):
-                index_2 = len(l2) - 1
-            elif (index_1 >= len(l1)) and (index_2 >= len(l2)):
+                result_list.val = l1.val
+                result_list.next = ListNode(0)
+                result_list = result_list.next
+                result_list.val = l1.val
+                if (l1.next != None):
+                    l1 = l1.next
+                if (l2.next != None):
+                    l2 = l2.next
+            if (l1.next == None) and (l2.next == None):
                 break
-        return result_list
-A = Solution()
-print (A.mergeTwoLists([1,2,4],[1,3,4]))
+            result_list.next = ListNode(0)
+            result_list = result_list.next
+        return Head.next
+# A = Solution()
+# print (A.mergeTwoLists([1,2,4],[1,3,4]))
         
 # @lc code=end
 

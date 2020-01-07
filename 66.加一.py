@@ -31,6 +31,7 @@ class Solution:
 
 
 # Another solution reduce runtime && memory cost base on above solution
+# Accept
 # 109/109 cases passed (28 ms)
 # Your runtime beats 98.3 % of python3 submissions
 # Your memory usage beats 99.82 % of python3 submissions (12.6 MB)

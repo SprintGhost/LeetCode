@@ -20,7 +20,7 @@
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
         if (headA == None or headB == None):
-            return None;
+            return None
         pA = headA
         pB = headB
         while (pA != pB):

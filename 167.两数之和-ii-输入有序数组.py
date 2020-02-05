@@ -17,15 +17,15 @@
 # Your memory usage beats 52.64 % of python3 submissions (13.8 MB)
 
 # @lc code=start
-# class Solution:
-#     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-#         hash_table = {}
-#         for index, num in enumerate(numbers):
-#             another_number = target - num
-#             if another_number in hash_table:
-#                 return [hash_table[another_number], index + 1]
-#             hash_table[num] = index + 1
-#         return None
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        hash_table = {}
+        for index, num in enumerate(numbers):
+            another_number = target - num
+            if another_number in hash_table:
+                return [hash_table[another_number], index + 1]
+            hash_table[num] = index + 1
+        return None
 
 #  The following solution use less space
 

@@ -40,6 +40,7 @@ class Solution:
 # Your memory usage beats 12.68 % of python3 submissions (14.4 MB)
 class Solution:
     def missingNumber(self, nums):
+        # Attention: This solution may cause overflow in C/C++ && Java
         expected_sum = len(nums)*(len(nums)+1)//2
         actual_sum = sum(nums)
         return expected_sum - actual_sum

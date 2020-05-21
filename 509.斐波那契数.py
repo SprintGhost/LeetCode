@@ -10,13 +10,13 @@
 # Your memory usage beats 5.55 % of python3 submissions (13.7 MB)
 
 # @lc code=start
-# class Solution:
-#     def fib(self, N: int) -> int:
-#         if N == 0:
-#             return 0
-#         if N == 1:
-#             return 1
-#         return self.fib(N - 1) + self.fib(N - 2)
+class Solution:
+    def fib(self, N: int) -> int:
+        if N == 0:
+            return 0
+        if N == 1:
+            return 1
+        return self.fib(N - 1) + self.fib(N - 2)
 
 
 # Accepted
@@ -24,23 +24,23 @@
 # Your runtime beats 31.83 % of python3 submissions
 # Your memory usage beats 5.55 % of python3 submissions (13.8 MB)
 
-# class Solution:
-#     def fib(self, N: int) -> int:
-#         if (N <= 1):
-#             return N
-#         if (N == 2):
-#             return 1
+class Solution:
+    def fib(self, N: int) -> int:
+        if (N <= 1):
+            return N
+        if (N == 2):
+            return 1
 
-#         current = 0
-#         prev1 = 1
-#         prev2 = 1
+        current = 0
+        prev1 = 1
+        prev2 = 1
 
-#         # Since range is exclusive and we want to include N, we need to put N+1.
-#         for i in range(3, N+1):
-#             current = prev1 + prev2
-#             prev2 = prev1
-#             prev1 = current
-#         return current
+        # Since range is exclusive and we want to include N, we need to put N+1.
+        for i in range(3, N+1):
+            current = prev1 + prev2
+            prev2 = prev1
+            prev1 = current
+        return current
 
 
 # Accepted
